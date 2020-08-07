@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<h1 align = "center">Edit Employee Details </h1>
+
+<form methods="POST" action="/update/{{employee.id}}">
+
+{% csrf_token %}
+
+  Employee Name:<br> <input type="text" name="name" maxlength="40" vlaue="{{employee.name}}"/><br>
+  Employee Designation:<br><input type="text" name="designation" maxlength="100" value="{{employee.designation}}"/>
+  <br><button type="submit" value="Submit">Update</button>
+</body>
+</html>

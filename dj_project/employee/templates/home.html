@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<h1 style="text-align: center;">Employee Table</h1>
+<body align="center">
+
+<a href='/create'> Add New Employee </a>
+
+<table border="1">
+
+  <tr> 
+
+      <th>Full Name</th>
+      <th>Designation</th>
+      <th colspan=2>Action</th>
+  </tr>
+
+<div>
+    {% for employee in employees%}
+
+      <tr>
+        <td>{{employee.name}}</td>
+        <td>{{employee.designation}}</td>
+        <td><a href="/edit/{{employee.id}}">Edit</a>
+        <td><a href="/delete/{{employee.id}}">Delete</a><td><br>
+      </tr>
+    {% endfor %}
+</table>
+</body>
+</html>    
+
+

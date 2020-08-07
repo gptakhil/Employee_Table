@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<h2 align="center"> ADD EMPLOYEE </h2>
+<br>
+<body align="center">
+
+<form action="/create" method="POST">
+
+  {% csrf_token %}
+  Employee Name: {{form.name}} &nbsp
+  Employee Designation: {{form.designation}}<br>
+  <button type="submit" value="Submit">Submit</button>
+</form>
+</body>
+
+</html>
